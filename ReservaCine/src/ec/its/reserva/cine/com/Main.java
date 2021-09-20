@@ -19,10 +19,10 @@ public class Main {
         System.out.println("\n ***REALIZADO POR PATRICIO PUCHA***");
     }  */ 
     public static void main(String[] args) {
-    Reserva reserva1=new Reserva();
-    reserva1.imprimirReservaAfiliado(Reserva.asignarValoresReservasAfiliado(), 
-    Afiliado.asignarValoresAfiliadoStatic(), Ticket.asignarValoresAfiliadoStatic(), Pelicula.seleccionarPelicula(Afiliado.edadUsuario),Sala.asignarvaloresAfiliadoStatic());
-            
+        Reserva reserva1=new Reserva();
+        reserva1.imprimirReservaAfiliado(Reserva.asignarValoresReservasAfiliado(), 
+        Afiliado.asignarValoresAfiliadoStatic(), Ticket.asignarValoresAfiliadoStatic(), Pelicula.seleccionarPelicula(Afiliado.edadUsuario),Sala.asignarvaloresAfiliadoStatic());
+        System.out.println("ec.its.reserva.cine.com.Main.main()");
             
     }
     
