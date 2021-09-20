@@ -1,7 +1,7 @@
 
 package ec.its.reserva.cine.com;
 
-import java.math.BigDecimal;
+import java.util.Date;
 import java.util.Scanner;
 
 /**
@@ -12,13 +12,20 @@ public class Factura {
    
     public static void generarFactura(boolean esAfiliado, Double precioAfiliado, Integer cantidadAsientos)
     {
-      Scanner ruc = new Scanner (System.in);
-      System.out.println("Ingerse su cedula o RUC para la Factura");
+      Scanner sc = new Scanner (System.in);
+      System.out.println("Ingerse su número de identificación para la Factura");
+      String identificacion = String.valueOf(sc.nextLine());
       if(esAfiliado==true){
+          System.out.println("No. 001-003-000034652");
+          System.out.println("Identificación: "+identificacion);
+          System.out.println("Fecha emisión:" + new Date());
+          System.out.println("Cantidad asientos:" + Pelicula.cantidadAsiento);
           Double subtotal=cantidadAsientos*precioAfiliado;
+          System.out.println("Subtotal:" + subtotal);
           Double iva=subtotal*0.12;
+          System.out.println("IVA:" + iva);
           Double total=subtotal+iva;
-          System.out.println("Su factura es por: "+total);
+          System.out.println("Total factura: "+total);
       }
     }
 }
