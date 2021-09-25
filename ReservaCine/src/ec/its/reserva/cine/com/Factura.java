@@ -13,7 +13,7 @@ public class Factura {
     public static void generarFactura(boolean esAfiliado, Double precioAfiliado, Integer cantidadAsientos)
     {
       Scanner sc = new Scanner (System.in);
-      System.out.println("Ingerse su número de identificación para la Factura");
+      System.out.println("Ingrese su número de identificación para la Factura");
       String identificacion = String.valueOf(sc.nextLine());
       if(esAfiliado==true){
           System.out.println("No. 001-003-000034652");
