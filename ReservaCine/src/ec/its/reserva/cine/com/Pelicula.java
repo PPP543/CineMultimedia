@@ -84,6 +84,7 @@ public class Pelicula {
 		int respuesta = 0;
 		boolean bandera = false;
 		Pelicula pelicula = new Pelicula();
+		@SuppressWarnings("resource")
 		Scanner sc = new Scanner(System.in);
 		// do {
 		System.out.println("Estimado Usuario Seleccione su película");

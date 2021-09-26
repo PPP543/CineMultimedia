@@ -58,7 +58,6 @@ public class Reserva {
 	}
 
 	public void imprimirReservaAfiliado(Reserva reserve, Afiliado afiliado, Ticket ticket, Pelicula pelicula,Sala sala){
-<<<<<<< HEAD
     	if (null == pelicula.getTitulo() && "".equals(pelicula.getTitulo())) {
 	        System.out.println("\n****RESERVA CINE****");
 	        System.out.println("Cliente Afiliado");
@@ -78,26 +77,6 @@ public class Reserva {
 	        System.out.println("Fecha: "+reserve.getFechaReserva());
 	        Factura.generarFactura(true, Afiliado.precioAfiliado, Pelicula.cantidadAsiento, afiliado);
     	}
-=======
-      if (null == pelicula.getTitulo() && "".equals(pelicula.getTitulo())) {
-        System.out.println("\n****RESERVA CINE****");
-        System.out.println("Cliente Afiliado");
-        System.out.println("RESERVA NO. "+reserve.getCodigoReserva());
-        System.out.println("Nombre: "+ afiliado.getNombre());
-        System.out.println("Apellido: "+ afiliado.getApellido());
-        System.out.println("Edad: "+afiliado.getEdad());
-        System.out.println("Codigo Afiliado: "+ afiliado.getCodigoafiliado());
-        //System.out.println("Precio Afiliado: "+ afiliado.getPrecioafiliado());
-        System.out.println("Pelicula: "+ pelicula.getTitulo());
-        System.out.println("Horario: "+ pelicula.getHorario());
-        /*System.out.println("Duración: "+ pelicula.getDuracion());
-        System.out.println("Genero: "+ pelicula.getGenero());
-        System.out.println("Categoria: "+ pelicula.getCategoria());*/
-        System.out.println("Ticket # : "+ticket.getIdticket());
-        System.out.println("Sala #: "+sala.getIdsala());
-        System.out.println("Fecha: "+reserve.getFechaReserva());
-        Factura.generarFactura(true, Afiliado.precioAfiliado, Pelicula.cantidadAsiento, afiliado);
-      }
->>>>>>> 51c398e5e31a2a8090020e6b1a64ba8fc50bf2a8
-    }
+
+	}
 }
