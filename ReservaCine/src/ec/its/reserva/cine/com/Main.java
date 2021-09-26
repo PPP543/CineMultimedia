@@ -20,9 +20,9 @@ public class Main {
     }  */ 
     public static void main(String[] args) {
         Reserva reserva1=new Reserva();
+        Afiliado afiliado=Afiliado.asignarValoresAfiliadoStatic();
         reserva1.imprimirReservaAfiliado(Reserva.asignarValoresReservasAfiliado(), 
-        Afiliado.asignarValoresAfiliadoStatic(), Ticket.asignarValoresAfiliadoStatic(), Pelicula.seleccionarPelicula(Afiliado.edadUsuario),
-        Sala.asignarvaloresAfiliadoStatic());            
+        afiliado, Ticket.asignarValoresAfiliadoStatic(), Pelicula.seleccionarPelicula(Afiliado.edadUsuario),Sala.asignarvaloresAfiliadoStatic());            
     }
     
 }
