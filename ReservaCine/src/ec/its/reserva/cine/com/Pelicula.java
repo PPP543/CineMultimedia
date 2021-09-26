@@ -82,7 +82,6 @@ public class Pelicula {
 
 	public static Pelicula seleccionarPelicula(int edad) {
 		int respuesta = 0;
-		boolean bandera = false;
 		Pelicula pelicula = new Pelicula();
 		@SuppressWarnings("resource")
 		Scanner sc = new Scanner(System.in);
@@ -105,7 +104,6 @@ public class Pelicula {
 		System.out.println("    Género: Infatil");
 		System.out.println("    Duración: 60 minutos");
 		System.out.println("    Categoría: Apto para todo público");
-		System.out.println("0. Salir");
 		Sala sala = new Sala();
 		respuesta = Integer.valueOf(sc.nextLine());
 		switch (respuesta) {
@@ -122,9 +120,9 @@ public class Pelicula {
 				respuesta = Integer.valueOf(sc.nextLine());
 				sala.seleccionarHorariosSalaUno(respuesta, pelicula);
 			} else {
-				System.out.println("Estimado usuario la película seleccionada no cumple con la edad permitida");
+				System.out.println("Estimado usuario la película seleccionada no cumple con la edad permitida.");
 			}
-			bandera = true;
+
 			break;
 		case 2:
 			if (edad >= 12) {
@@ -138,10 +136,8 @@ public class Pelicula {
 				respuesta = Integer.valueOf(sc.nextLine());
 				sala.seleccionarHorariosSalaDos(respuesta, pelicula);
 			} else {
-				System.out.println("Estimado usuario la película seleccionada no cumple con la edad permitida");
-
+				System.out.println("Estimado usuario la película seleccionada no cumple con la edad permitida.");
 			}
-			bandera = true;
 			break;
 		case 3:
 			if (edad >= 12) {
@@ -154,9 +150,8 @@ public class Pelicula {
 				respuesta = Integer.valueOf(sc.nextLine());
 				sala.seleccionarHorariosSalaTres(respuesta, pelicula);
 			} else {
-				System.out.println("Estimado usuario la película seleccionada no cumple con la edad permitida");
+				System.out.println("Estimado usuario la película seleccionada no cumple con la edad permitida.");
 			}
-			bandera = true;
 			break;
 		case 4:
 			// System.out.println("Paw Patrol");
@@ -168,33 +163,18 @@ public class Pelicula {
 			sc = new Scanner(System.in);
 			respuesta = Integer.valueOf(sc.nextLine());
 			sala.seleccionarHorariosSalaCuatro(respuesta, pelicula);
-			bandera = true;
 			break;
 //			case 0:
 //				System.out.println("Salir");
 //				break;
 		default:
-			System.out.println("No ha seleccionado una opción CORRECTA");
+			System.out.println("No ha seleccionado una opción CORRECTA.");
 		}
-		// } while (respuesta != 0);
-		if (bandera) {
+		if (null == pelicula.getTitulo()) {
 			System.out.println("Ingrese cuantos asientos desea reservar:");
 			cantidadAsiento = Integer.valueOf(sc.nextLine());
 		}
 		return pelicula;
 	}
 
-	/*
-	 * static void showPatientMenu(){ int response = 0; do {
-	 * System.out.println("\n\n"); System.out.println("Patient");
-	 * System.out.println("1. Book an appointment");
-	 * System.out.println("2. My appointments"); System.out.println("0. Return");
-	 * 
-	 * Scanner sc = new Scanner(System.in); response =
-	 * Integer.valueOf(sc.nextLine());
-	 * 
-	 * switch (response){ case 1: System.out.println("::Book an appointment");
-	 * break; case 2: System.out.println("::My appointments"); break; case 0:
-	 * showMenu(); break; } }while (response != 0); }
-	 */
 }

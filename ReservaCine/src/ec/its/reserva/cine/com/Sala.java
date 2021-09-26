@@ -23,7 +23,7 @@ public class Sala {
         this.nasiento = nasiento;
     }
     
-    public static Sala asignarvaloresAfiliadoStatic()
+    public static Sala asignarValoresSalaStatic()
     {
         Sala sala= new Sala ();
         //codigoSala++;

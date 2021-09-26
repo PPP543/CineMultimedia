@@ -1,5 +1,6 @@
 package ec.its.reserva.cine.com;
 
+import java.util.Random;
 import java.util.Scanner;
 
 public class Afiliado extends Cliente {
@@ -9,12 +10,14 @@ public class Afiliado extends Cliente {
     //Uso de Wrappers
     static Double precioAfiliado = 5.25;
     //creación variable estatica
-    static boolean esAfiliado = true;
-    static int id = 0;
-    static int edadUsuario = 0;
+    static boolean esAfiliado = false;
 
     //encapsualamiento
     public int getCodigoafiliado() {
+    	Random r = new Random();
+    	int low = 1000;
+    	int high = 10000;
+    	codigoafiliado = r.nextInt(high-low) + low;
         return codigoafiliado;
     }
 
@@ -32,24 +35,16 @@ public class Afiliado extends Cliente {
         return afiliado1;
     }
 
-    public static Afiliado asignarValoresAfiliadoStatic() {
-        @SuppressWarnings("resource")
-		Scanner scr = new Scanner(System.in);
-        System.out.println("ESTIMADO USUARIO POR FAVOR INGRESE SUS DATOS: ");
+    public static Afiliado asignarValoresAfiliadoStatic(Scanner sc) {
         Afiliado afiliado1 = new Afiliado();
-        id++;
-        afiliado1.setCodigoafiliado(id);
         System.out.println("NOMBRE: ");
-        afiliado1.setNombre(scr.nextLine());
+        afiliado1.setNombre(sc.nextLine());
         System.out.println("APELLIDO: ");
-        afiliado1.setApellido(scr.nextLine());
-         System.out.println("EDAD2: ");
-        afiliado1.setEdad(Integer.parseInt(scr.nextLine()));
+        afiliado1.setApellido(sc.nextLine());
+         System.out.println("EDAD: ");
+        afiliado1.setEdad(Integer.parseInt(sc.nextLine()));
         System.out.println("DIRECCIÓN: ");
-        afiliado1.setDireccion(scr.nextLine());
-        edadUsuario = afiliado1.getEdad();
-        //System.out.println("APELLIDO: "+afiliado1.getApellido());
-        //System.out.println("AFILIADO: "+afiliado1.getNombre()+ " " +afiliado1.getApellido());
+        afiliado1.setDireccion(sc.nextLine());
         return afiliado1;
     }
 }

@@ -1,5 +1,8 @@
 
 package ec.its.reserva.cine.com;
+
+import java.util.Random;
+
 public class Cliente {
 private Integer id;
 private int edad;
@@ -10,6 +13,10 @@ private String correo;
 private String direccion;
 
     public Integer getId() {
+    	Random r = new Random();
+    	int low = 10;
+    	int high = 100;
+    	id = r.nextInt(high-low) + low;
         return id;
     }
 

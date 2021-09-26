@@ -9,25 +9,36 @@ import java.util.Scanner;
  */
 public class Factura {
 
-    public static void generarFactura(boolean esAfiliado, Double precioAfiliado, Integer cantidadAsientos, Afiliado afiliado) {
-        if (esAfiliado == true) {
-            @SuppressWarnings("resource")
-			Scanner sc = new Scanner(System.in);
-            System.out.println("Ingrese su número de identificación para la Factura");
-            String identificacion = String.valueOf(sc.nextLine());
-            System.out.println("****DETALLE FACTURA****");
-            System.out.println("  No. 001-003-000034652");
-            System.out.println("  Identificación: " + identificacion);
-            System.out.println("  Fecha emisión: " + new Date());
-            System.out.println("  Dirección: " + afiliado.getDireccion());
-            System.out.println("  Nombre: "+afiliado.getNombre());
-            System.out.println("  Cantidad asientos:" + Pelicula.cantidadAsiento);
-            Double subtotal = cantidadAsientos * precioAfiliado;
-            System.out.println("  Subtotal:" + subtotal);
-            Double iva = subtotal * 0.12;
-            System.out.println("  IVA:" + iva);
-            Double total = subtotal + iva;
-            System.out.println("  Total factura: " + total);
-        }
-    }
+	public static void generarFactura(boolean esAfiliado, Integer cantidadAsientos, Afiliado afiliado, ClienteNormal clienteNormal) {
+		@SuppressWarnings("resource")
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Ingrese su número de identificación para la Factura");
+		String identificacion = String.valueOf(sc.nextLine());
+		System.out.println("****DETALLE FACTURA****");
+		System.out.println("  No. 001-003-000034652");
+		System.out.println("  Identificación: " + identificacion);
+		System.out.println("  Fecha emisión: " + new Date());
+		
+		if (esAfiliado == true) {
+			System.out.println("  Nombre: " + afiliado.getNombre());
+			System.out.println("  Dirección: " + afiliado.getDireccion());
+		}else {
+			System.out.println("  Nombre: " + clienteNormal.getNombre());
+			System.out.println("  Dirección: " + clienteNormal.getDireccion());
+		}
+		System.out.println("  Cantidad asientos:" + Pelicula.cantidadAsiento);
+		Double subtotal = 0D;
+		if (esAfiliado == true) {
+			System.out.println("  Precio unitario:" + Afiliado.precioAfiliado);
+			subtotal = cantidadAsientos * Afiliado.precioAfiliado;
+		} else {
+			System.out.println("  Precio unitario:" + ClienteNormal.precio);
+			subtotal = cantidadAsientos * ClienteNormal.precio;
+		}
+		System.out.println("  Subtotal:" + subtotal);
+		Double iva = subtotal * 0.12;
+		System.out.println("  IVA:" + iva);
+		Double total = subtotal + iva;
+		System.out.println("  Total factura: " + total);
+	}
 }
