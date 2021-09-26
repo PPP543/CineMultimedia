@@ -11,6 +11,7 @@ public class Factura {
 
     public static void generarFactura(boolean esAfiliado, Double precioAfiliado, Integer cantidadAsientos, Afiliado afiliado) {
 
+    
         if (esAfiliado == true) {
             System.out.println("****DETALLE FACTURA****");
             Scanner sc = new Scanner(System.in);

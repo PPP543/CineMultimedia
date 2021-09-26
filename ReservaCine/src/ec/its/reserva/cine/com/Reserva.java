@@ -3,43 +3,42 @@ package ec.its.reserva.cine.com;
 import java.util.Date;
 
 public class Reserva {
-private int codigoReserva;
-static int id=150;
+	private int codigoReserva;
+	static int id = 150;
 
-    public int getCodigoReserva() {
-        return codigoReserva;
-    }
+	public int getCodigoReserva() {
+		return codigoReserva;
+	}
 
-    public void setCodigoReserva(int codigoReserva) {
-        this.codigoReserva = codigoReserva;
-    }
-private String fechaReserva;
+	public void setCodigoReserva(int codigoReserva) {
+		this.codigoReserva = codigoReserva;
+	}
 
+	private String fechaReserva;
 
-    public String getFechaReserva() {
-        return fechaReserva;
-    }
+	public String getFechaReserva() {
+		return fechaReserva;
+	}
 
-    public void setFechaReserva(String fechaReserva) {
-        this.fechaReserva = fechaReserva;
-    }
+  public void setFechaReserva(String fechaReserva) {
+    this.fechaReserva = fechaReserva;
+  }
     
-    public static Reserva asignarValoresReservasAfiliado(){
-        Reserva reserve= new Reserva();
-        reserve.setCodigoReserva(id++);
-        reserve.setFechaReserva(new Date().toString());
-        return reserve;
-        
-    }
+  public static Reserva asignarValoresReservasAfiliado(){
+    Reserva reserve= new Reserva();
+    reserve.setCodigoReserva(id++);
+    reserve.setFechaReserva(new Date().toString());
+    return reserve;
+  }
     
-    public Reserva asignarValores()
-    {
-        Reserva reservaNormal = new Reserva ();
-        //reservaNormal.setReservaN("1123");
-        reservaNormal.setFechaReserva("1/08/2021");
-        
-        return reservaNormal;
-    }
+  public Reserva asignarValores()
+  {
+    Reserva reservaNormal = new Reserva ();
+    //reservaNormal.setReservaN("1123");
+    reservaNormal.setFechaReserva("1/08/2021");
+
+    return reservaNormal;
+  }
     
     public void imprimirReservaClienteNormal(Reserva reserve, ClienteNormal clienteNormal, Ticket ticket, Sala sala, Pelicula pelicula){
         System.out.println("Reserva Cine");
@@ -59,6 +58,7 @@ private String fechaReserva;
     }
     
     public void imprimirReservaAfiliado(Reserva reserve, Afiliado afiliado, Ticket ticket, Pelicula pelicula,Sala sala){
+      if (null == pelicula.getTitulo() && "".equals(pelicula.getTitulo())) {
         System.out.println("\n****RESERVA CINE****");
         System.out.println("Cliente Afiliado");
         System.out.println("RESERVA NO. "+reserve.getCodigoReserva());
@@ -76,5 +76,6 @@ private String fechaReserva;
         System.out.println("Sala #: "+sala.getIdsala());
         System.out.println("Fecha: "+reserve.getFechaReserva());
         Factura.generarFactura(true, Afiliado.precioAfiliado, Pelicula.cantidadAsiento, afiliado);
+      }
     }
 }
