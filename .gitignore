@@ -18,15 +18,12 @@
 *.zip
 *.tar.gz
 *.rar
-
 /ReservaCine/dist/
 /ReservaCine/build/
 /bin/
 .classpath
-.project
-/bin/
 .metadata
-
+bin/
 tmp/
 *.tmp
 *.bak
