@@ -7,7 +7,7 @@ private String nombre;
 private String apellido;
 private String telefono;
 private String correo;
-private String password;
+private String direccion;
 
     public Integer getId() {
         return id;
@@ -40,4 +40,30 @@ private String password;
     public void setApellido(String apellido) {
         this.apellido = apellido;
     }
+
+    public String getDireccion() {
+        return direccion;
+    }
+
+    public void setDireccion(String direccion) {
+        this.direccion = direccion;
+    }
+    
+
+    public String getTelefono() {
+        return telefono;
+    }
+
+    public void setTelefono(String telefono) {
+        this.telefono = telefono;
+    }
+
+    public String getCorreo() {
+        return correo;
+    }
+
+    public void setCorreo(String correo) {
+        this.correo = correo;
+    }
+    
 }

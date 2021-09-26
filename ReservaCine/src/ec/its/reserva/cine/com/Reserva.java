@@ -59,7 +59,7 @@ private String fechaReserva;
     }
     
     public void imprimirReservaAfiliado(Reserva reserve, Afiliado afiliado, Ticket ticket, Pelicula pelicula,Sala sala){
-        System.out.println("\nReserva Cine");
+        System.out.println("\n****RESERVA CINE****");
         System.out.println("Cliente Afiliado");
         System.out.println("RESERVA NO. "+reserve.getCodigoReserva());
         System.out.println("Nombre: "+ afiliado.getNombre());
@@ -75,6 +75,6 @@ private String fechaReserva;
         System.out.println("Ticket # : "+ticket.getIdticket());
         System.out.println("Sala #: "+sala.getIdsala());
         System.out.println("Fecha: "+reserve.getFechaReserva());
-        Factura.generarFactura(true, Afiliado.precioAfiliado, Pelicula.cantidadAsiento);
+        Factura.generarFactura(true, Afiliado.precioAfiliado, Pelicula.cantidadAsiento, afiliado);
     }
 }

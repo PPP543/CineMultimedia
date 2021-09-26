@@ -41,10 +41,11 @@ public class Afiliado extends Cliente {
         System.out.println("NOMBRE: ");
         afiliado1.setNombre(scr.nextLine());
         System.out.println("APELLIDO: ");
-        //System.out.println("NOMBRE: "+afiliado1.getNombre());
         afiliado1.setApellido(scr.nextLine());
-        System.out.println("EDAD: ");
-        afiliado1.setEdad(scr.nextInt());
+         System.out.println("EDAD2: ");
+        afiliado1.setEdad(Integer.parseInt(scr.nextLine()));
+        System.out.println("DIRECCIÓN: ");
+        afiliado1.setDireccion(scr.nextLine());
         edadUsuario = afiliado1.getEdad();
         //System.out.println("APELLIDO: "+afiliado1.getApellido());
         //System.out.println("AFILIADO: "+afiliado1.getNombre()+ " " +afiliado1.getApellido());

@@ -84,7 +84,7 @@ public class Pelicula {
         //System.out.println("Edad usuario: -->" + edad);
         int respuesta = 0;
         Pelicula pelicula = new Pelicula();
-       
+        System.out.println("****CARTELERA DE HOY****");
         System.out.println("1. Rápidos y Furiosos 9");
         System.out.println("    Género: Acción");
         System.out.println("    Duración: 90 minutos");
