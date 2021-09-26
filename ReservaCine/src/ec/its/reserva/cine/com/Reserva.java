@@ -59,7 +59,9 @@ public class Reserva {
 
 	public void imprimirReservaAfiliado(Reserva reserve, Afiliado afiliado, Ticket ticket, Pelicula pelicula,Sala sala){
     	if (null == pelicula.getTitulo() && "".equals(pelicula.getTitulo())) {
-	        System.out.println("\n****RESERVA CINE****");
+    		System.out.println("\n Estimado usuario, si desea reservar favor volver a ingresar");
+    	}else {
+    		System.out.println("\n****RESERVA CINE****");
 	        System.out.println("Cliente Afiliado");
 	        System.out.println("RESERVA NO. "+reserve.getCodigoReserva());
 	        System.out.println("Nombre: "+ afiliado.getNombre());
