@@ -3,22 +3,22 @@ package ec.its.reserva.cine.com;
 import java.util.Date;
 
 public class Reserva {
-private int codigoReserva;
-static int id=150;
+	private int codigoReserva;
+	static int id = 150;
 
-    public int getCodigoReserva() {
-        return codigoReserva;
-    }
+	public int getCodigoReserva() {
+		return codigoReserva;
+	}
 
-    public void setCodigoReserva(int codigoReserva) {
-        this.codigoReserva = codigoReserva;
-    }
-private String fechaReserva;
+	public void setCodigoReserva(int codigoReserva) {
+		this.codigoReserva = codigoReserva;
+	}
 
+	private String fechaReserva;
 
-    public String getFechaReserva() {
-        return fechaReserva;
-    }
+	public String getFechaReserva() {
+		return fechaReserva;
+	}
 
     public void setFechaReserva(String fechaReserva) {
         this.fechaReserva = fechaReserva;
@@ -59,22 +59,24 @@ private String fechaReserva;
     }
     
     public void imprimirReservaAfiliado(Reserva reserve, Afiliado afiliado, Ticket ticket, Pelicula pelicula,Sala sala){
-        System.out.println("\n****RESERVA CINE****");
-        System.out.println("Cliente Afiliado");
-        System.out.println("RESERVA NO. "+reserve.getCodigoReserva());
-        System.out.println("Nombre: "+ afiliado.getNombre());
-        System.out.println("Apellido: "+ afiliado.getApellido());
-        System.out.println("Edad: "+afiliado.getEdad());
-        System.out.println("Codigo Afiliado: "+ afiliado.getCodigoafiliado());
-        //System.out.println("Precio Afiliado: "+ afiliado.getPrecioafiliado());
-        System.out.println("Pelicula: "+ pelicula.getTitulo());
-        System.out.println("Horario: "+ pelicula.getHorario());
-        /*System.out.println("Duración: "+ pelicula.getDuracion());
-        System.out.println("Genero: "+ pelicula.getGenero());
-        System.out.println("Categoria: "+ pelicula.getCategoria());*/
-        System.out.println("Ticket # : "+ticket.getIdticket());
-        System.out.println("Sala #: "+sala.getIdsala());
-        System.out.println("Fecha: "+reserve.getFechaReserva());
-        Factura.generarFactura(true, Afiliado.precioAfiliado, Pelicula.cantidadAsiento, afiliado);
+    	if (null == pelicula.getTitulo() && "".equals(pelicula.getTitulo())) {
+	        System.out.println("\n****RESERVA CINE****");
+	        System.out.println("Cliente Afiliado");
+	        System.out.println("RESERVA NO. "+reserve.getCodigoReserva());
+	        System.out.println("Nombre: "+ afiliado.getNombre());
+	        System.out.println("Apellido: "+ afiliado.getApellido());
+	        System.out.println("Edad: "+afiliado.getEdad());
+	        System.out.println("Codigo Afiliado: "+ afiliado.getCodigoafiliado());
+	        //System.out.println("Precio Afiliado: "+ afiliado.getPrecioafiliado());
+	        System.out.println("Pelicula: "+ pelicula.getTitulo());
+	        System.out.println("Horario: "+ pelicula.getHorario());
+	        /*System.out.println("Duración: "+ pelicula.getDuracion());
+	        System.out.println("Genero: "+ pelicula.getGenero());
+	        System.out.println("Categoria: "+ pelicula.getCategoria());*/
+	        System.out.println("Ticket # : "+ticket.getIdticket());
+	        System.out.println("Sala #: "+sala.getIdsala());
+	        System.out.println("Fecha: "+reserve.getFechaReserva());
+	        Factura.generarFactura(true, Afiliado.precioAfiliado, Pelicula.cantidadAsiento, afiliado);
+    	}
     }
 }
