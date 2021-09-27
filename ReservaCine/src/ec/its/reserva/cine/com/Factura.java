@@ -20,6 +20,9 @@ public class Factura {
             System.out.println("  Identificación: " + identificacion);
             System.out.println("  Fecha emisión: " + new Date());
             System.out.println("  Nombre: "+afiliado.getNombre());
+            System.out.println("  Apellido: "+afiliado.getApellido());
+            System.out.println("  Dirección: "+afiliado.getDireccion());
+            System.out.println("  Correo: "+afiliado.getCorreo());
             System.out.println("  Cantidad asientos:" + Pelicula.cantidadAsiento);
             Double subtotal = cantidadAsientos * precioAfiliado;
             System.out.println("  Subtotal:" + subtotal);
