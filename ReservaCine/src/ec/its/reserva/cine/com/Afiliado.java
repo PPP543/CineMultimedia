@@ -37,14 +37,14 @@ public class Afiliado extends Cliente {
 
     public static Afiliado asignarValoresAfiliadoStatic(Scanner sc) {
         Afiliado afiliado1 = new Afiliado();
-        System.out.println("NOMBRE: ");
-        afiliado1.setNombre(sc.nextLine());
-        System.out.println("APELLIDO: ");
-        afiliado1.setApellido(sc.nextLine());
-         System.out.println("EDAD: ");
+        System.out.println("NOMBRES Y APELLIDOS: ");
+        afiliado1.setNombreCompleto(sc.nextLine());
+        System.out.println("EDAD: ");
         afiliado1.setEdad(Integer.parseInt(sc.nextLine()));
-        System.out.println("DIRECCIÓN: ");
+        System.out.println("DIRECCION: ");
         afiliado1.setDireccion(sc.nextLine());
+        System.out.println("CORREO ELECTRONICO: ");
+        afiliado1.setCorreo(sc.nextLine());
         return afiliado1;
     }
 }

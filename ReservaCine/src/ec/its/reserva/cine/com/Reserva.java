@@ -44,13 +44,12 @@ public class Reserva {
 
 	public void imprimirReservaClienteNormal(Reserva reserve, ClienteNormal clienteNormal, Pelicula pelicula,
 			Sala sala) {
-		if (null == pelicula.getTitulo() | null == pelicula.getHorario()) {
-			System.out.println("\n Reserva no generada.");
+		if ("".equals(pelicula.getTitulo()) ||"".equals(pelicula.getHorario())) {
+			System.out.println("\n *****Reserva no generada.*****");
 		} else {
 			System.out.println("\n********RESERVA CINE********");
 			System.out.println("Cliente Normal");
-			System.out.println("Nombre cliente: " + clienteNormal.getNombre());
-			System.out.println("Apellido: " + clienteNormal.getApellido());
+			System.out.println("Nombres: " + clienteNormal.getNombreCompleto());
 			System.out.println("Edad: " + clienteNormal.getEdad());
 			System.out.println("Código cliente: " + clienteNormal.getId());
 			System.out.println("Película: " + pelicula.getTitulo());
@@ -64,14 +63,13 @@ public class Reserva {
 	}
 
 	public void imprimirReservaAfiliado(Reserva reserve, Afiliado afiliado, Pelicula pelicula, Sala sala) {
-		if (null == pelicula.getTitulo() | null == pelicula.getHorario()) {
-			System.out.println("\n Reserva no generada.");
+		if ("".equals(pelicula.getTitulo()) ||"".equals(pelicula.getHorario())) {
+			System.out.println("\n *****Reserva no generada.*****");
 		} else {
 			System.out.println("\n********RESERVA CINE********");
 			System.out.println("Cliente Afiliado");
 			System.out.println("RESERVA NO. " + reserve.getCodigoReserva());
-			System.out.println("Nombre: " + afiliado.getNombre());
-			System.out.println("Apellido: " + afiliado.getApellido());
+			System.out.println("Nombres: " + afiliado.getNombreCompleto());
 			System.out.println("Edad: " + afiliado.getEdad());
 			System.out.println("Código afiliado: " + afiliado.getId());
 			System.out.println("Película: " + pelicula.getTitulo());

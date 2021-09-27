@@ -26,7 +26,6 @@ public class Sala {
     public static Sala asignarValoresSalaStatic()
     {
         Sala sala= new Sala ();
-        //codigoSala++;
         numeroAsiento++;
         sala.setIdsala(codigoSala);
         sala.setNasiento(numeroAsiento);
@@ -34,10 +33,7 @@ public class Sala {
     }
     
     public void seleccionarHorariosSalaUno(int horario, Pelicula pelicula){
-        //Sala sala= new Sala ();
         codigoSala +=1;
-        //sala.setIdsala(codigoSala);
-        //System.out.println(sala.getIdsala());
         switch (horario) {
             case 1:
                 pelicula.setHorario("10:00-12:00");
@@ -50,9 +46,6 @@ public class Sala {
                 break;
             case 4:
                 pelicula.setHorario("20:00-22:00");
-                break;
-            case 0:
-                System.out.println("Salir");
                 break;
             default:
                 System.out.println("No ha seleccionado una opción CORRECTA");
@@ -83,11 +76,8 @@ public class Sala {
             case 4:
                 pelicula.setHorario("17:00-18:40");
                 break;
-            case 0:
-                System.out.println("Salir");
-                break;
             default:
-                System.out.println("No ha seleccionado una opción CORRECTA");
+                System.out.println("No ha seleccionado una opción CORRECTA.");
         }
     }
     
@@ -112,11 +102,8 @@ public class Sala {
             case 4:
                 pelicula.setHorario("19:00-20:50");
                 break;
-            case 0:
-                System.out.println("Salir");
-                break;
             default:
-                System.out.println("No ha seleccionado una opción CORRECTA");
+                System.out.println("No ha seleccionado una opción CORRECTA.");
         }
     }
     
@@ -139,11 +126,8 @@ public class Sala {
             case 3:
                 pelicula.setHorario("14:00-15:15");
                 break;
-            case 0:
-                System.out.println("Salir");
-                break;
             default:
-                System.out.println("No ha seleccionado una opción CORRECTA");
+                System.out.println("No ha seleccionado una opción CORRECTA.");
         }
     }
     public void mostrarHorariosSalaCuatro(){
