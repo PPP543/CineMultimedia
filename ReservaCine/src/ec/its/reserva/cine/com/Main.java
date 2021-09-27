@@ -21,8 +21,8 @@ public class Main {
     public static void main(String[] args) {
         Reserva reserva1=new Reserva();
         Afiliado afiliado=Afiliado.asignarValoresAfiliadoStatic();
-        reserva1.imprimirReservaAfiliado(Reserva.asignarValoresReservasAfiliado(), 
-        afiliado, Ticket.asignarValoresAfiliadoStatic(), Pelicula.seleccionarPelicula(Afiliado.edadUsuario),Sala.asignarvaloresAfiliadoStatic());            
+        reserva1.imprimirReservaAfiliado(Reserva.asignarValoresReservasAfiliado(),
+        afiliado, Ticket.asignarValoresAfiliadoStatic(), Pelicula.seleccionarPelicula(Afiliado.edadUsuario),Sala.asignarvaloresAfiliadoStatic());
     }
     
 }

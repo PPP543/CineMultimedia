@@ -33,7 +33,8 @@ public class Afiliado extends Cliente {
     }
 
     public static Afiliado asignarValoresAfiliadoStatic() {
-        Scanner scr = new Scanner(System.in);
+        @SuppressWarnings("resource")
+		Scanner scr = new Scanner(System.in);
         System.out.println("ESTIMADO USUARIO POR FAVOR INGRESE SUS DATOS: ");
         Afiliado afiliado1 = new Afiliado();
         id++;
