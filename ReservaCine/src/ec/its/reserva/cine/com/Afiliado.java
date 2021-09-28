@@ -34,7 +34,7 @@ public class Afiliado extends Cliente {
         //afiliado1.setPrecioafiliado(4);
         return afiliado1;
     }
-
+//implementación parametro Scanner como parametro en el método
     public static Afiliado asignarValoresAfiliadoStatic(Scanner sc) {
         Afiliado afiliado1 = new Afiliado();
         System.out.println("NOMBRES Y APELLIDOS: ");

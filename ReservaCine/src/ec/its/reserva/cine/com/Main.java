@@ -5,6 +5,7 @@ import java.util.Scanner;
 
 public class Main {
 
+
 	 /* System.out.println("BIENVENIDO ");
 	 * 
 	 * System.out.println("\n ***REALIZADO POR PATRICIO PUCHA***"); }
@@ -17,8 +18,8 @@ public class Main {
 		String esAfiliado = sc.nextLine();
 		System.out.println("Favor ingresar lo siguientes datos: ");
 		Reserva reserva1 = new Reserva();
-		// transformo en un boolean lo que ingresa el usuario por teclado
-		if ("s".equalsIgnoreCase(esAfiliado)) {
+		// transformo en un boolean lo que ingresa el usuario por teclado (Validadción cliente)
+                if ("s".equalsIgnoreCase(esAfiliado)) {
 			Afiliado.esAfiliado = Boolean.TRUE;
 		}
 

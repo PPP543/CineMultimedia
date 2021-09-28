@@ -7,9 +7,10 @@ public class Reserva {
 	private int codigoReserva;
 
 	public int getCodigoReserva() {
-		Random r = new Random();
+	//implementacion clase ramdom	
+            Random r = new Random();
 		int low = 100;
-		int high = 500;
+		int high = 10000;
 		codigoReserva = r.nextInt(high - low) + low;
 		return codigoReserva;
 	}
