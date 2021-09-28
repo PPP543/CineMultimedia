@@ -87,7 +87,6 @@ public class Pelicula {
 		Scanner sc = new Scanner(System.in);
 		// do {
 		System.out.println("Estimado Usuario Seleccione su película");
-		// System.out.println("Edad usuario: -->" + edad);
 		System.out.println("1. Rápidos y Furiosos 9");
 		System.out.println("    Género: Acción");
 		System.out.println("    Duración: 90 minutos");
@@ -109,7 +108,6 @@ public class Pelicula {
 		switch (respuesta) {
 		case 1:
 			if (edad >= 16) {
-				// System.out.println(" Rápidos y Furiosos");
 				pelicula.setTitulo("Rápidos y Furiosos");
 				pelicula.setGenero("Acción");
 				pelicula.setCategoria("Mayores de 16 años");
@@ -120,9 +118,8 @@ public class Pelicula {
 				respuesta = Integer.valueOf(sc.nextLine());
 				sala.seleccionarHorariosSalaUno(respuesta, pelicula);
 			} else {
-				System.out.println("Estimado usuario la película seleccionada no cumple con la edad permitida.");
+				System.out.println("Estimado usuario la película seleccionada es apta para público de 16 años en adelante.");
 			}
-
 			break;
 		case 2:
 			if (edad >= 12) {
@@ -136,11 +133,11 @@ public class Pelicula {
 				respuesta = Integer.valueOf(sc.nextLine());
 				sala.seleccionarHorariosSalaDos(respuesta, pelicula);
 			} else {
-				System.out.println("Estimado usuario la película seleccionada no cumple con la edad permitida.");
+				System.out.println("Estimado usuario la película seleccionada es apta para público de 12 años en adelante.");
 			}
 			break;
 		case 3:
-			if (edad >= 12) {
+			if (edad >= 18) {
 				pelicula.setTitulo("La última gran estafa");
 				pelicula.setGenero("Acción/Ciencia ficción");
 				pelicula.setCategoria("Mayores de 18 años");
@@ -150,11 +147,10 @@ public class Pelicula {
 				respuesta = Integer.valueOf(sc.nextLine());
 				sala.seleccionarHorariosSalaTres(respuesta, pelicula);
 			} else {
-				System.out.println("Estimado usuario la película seleccionada no cumple con la edad permitida.");
+				System.out.println("Estimado usuario la película seleccionada es apta para público de 18 años en adelante.");
 			}
 			break;
 		case 4:
-			// System.out.println("Paw Patrol");
 			pelicula.setTitulo("Paw Patrol");
 			pelicula.setGenero("Infantil");
 			pelicula.setCategoria("Todo público");
@@ -164,13 +160,15 @@ public class Pelicula {
 			respuesta = Integer.valueOf(sc.nextLine());
 			sala.seleccionarHorariosSalaCuatro(respuesta, pelicula);
 			break;
-//			case 0:
-//				System.out.println("Salir");
-//				break;
 		default:
 			System.out.println("No ha seleccionado una opción CORRECTA.");
 		}
-		if (null == pelicula.getTitulo()) {
+		
+		if (null == pelicula.getTitulo() || null == pelicula.getHorario()) {
+			pelicula.setTitulo("");
+			pelicula.setHorario("");
+		}else {//para controlar cuando en el switch se fue por el default o no ha seleccionado una opcion valida
+			//
 			System.out.println("Ingrese cuantos asientos desea reservar:");
 			cantidadAsiento = Integer.valueOf(sc.nextLine());
 		}

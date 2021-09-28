@@ -8,6 +8,7 @@ private Integer id;
 private int edad;
 private String nombre;
 private String apellido;
+private String nombreCompleto;
 private String telefono;
 private String correo;
 private String direccion;
@@ -46,6 +47,14 @@ private String direccion;
 
     public void setApellido(String apellido) {
         this.apellido = apellido;
+    }
+    
+    public String getNombreCompleto() {
+    	return nombreCompleto;
+    }
+
+    public void setNombreCompleto(String nombreCompleto) {
+    	this.nombreCompleto = nombreCompleto;
     }
 
     public String getDireccion() {

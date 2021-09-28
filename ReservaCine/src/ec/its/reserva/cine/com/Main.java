@@ -5,11 +5,16 @@ import java.util.Scanner;
 
 public class Main {
 
+
+	 /* System.out.println("BIENVENIDO ");
+	 * 
+	 * System.out.println("\n ***REALIZADO POR PATRICIO PUCHA***"); }
+	 */
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		System.out.println("*****Iniciando el proceso de reserva*****");
+		System.out.println("*****Inicio del proceso de reserva*****");
 		System.out.println("Es afiliado?");
-		System.out.println("Si su respuesta es SI favor teclear s. Caso contrario n");
+		System.out.println("Si su respuesta es SI favor teclear (s/S)");
 		String esAfiliado = sc.nextLine();
 		System.out.println("Favor ingresar lo siguientes datos: ");
 		Reserva reserva1 = new Reserva();

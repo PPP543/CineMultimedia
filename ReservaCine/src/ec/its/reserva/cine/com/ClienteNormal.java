@@ -18,14 +18,14 @@ public class ClienteNormal extends Cliente {
 
 	public static ClienteNormal asignarValoresClienteNormalStatic(Scanner sc) {
 		ClienteNormal cliente = new ClienteNormal();
-		System.out.println("NOMBRE: ");
-		cliente.setNombre(sc.nextLine());
-		System.out.println("APELLIDO: ");
-		cliente.setApellido(sc.nextLine());
+		System.out.println("NOMBRES Y APELLIDOS: ");
+		cliente.setNombreCompleto(sc.nextLine());
 		System.out.println("EDAD: ");
 		cliente.setEdad(Integer.parseInt(sc.nextLine()));
-		System.out.println("DIRECCIÓN: ");
+		System.out.println("DIRECCION: ");
 		cliente.setDireccion(sc.nextLine());
+        System.out.println("CORREO ELECTRONICO: ");
+        cliente.setCorreo(sc.nextLine());
 		return cliente;
 	}
 }
