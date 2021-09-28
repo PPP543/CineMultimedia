@@ -15,7 +15,7 @@ private String direccion;
     public Integer getId() {
     	Random r = new Random();
     	int low = 10;
-    	int high = 100;
+    	int high = 100000;
     	id = r.nextInt(high-low) + low;
         return id;
     }
