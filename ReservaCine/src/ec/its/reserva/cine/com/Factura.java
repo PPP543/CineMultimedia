@@ -32,7 +32,7 @@ public class Factura {
 		}else {
 			System.out.println("  Nombre: " + clienteNormal.getNombreCompleto());
 			System.out.println("  Dirección: " + clienteNormal.getDireccion());
-			System.out.println("  Correo electrónico: " + afiliado.getCorreo());
+			System.out.println("  Correo electrónico: " + clienteNormal.getCorreo());
 		}
 		System.out.println("  Cantidad asientos:" + Pelicula.cantidadAsiento);
 		Double subtotal = 0D;
